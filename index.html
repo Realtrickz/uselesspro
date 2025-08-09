@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RageQuiz</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="landing">
+        <button id="startBtn">Start Quiz</button>
+        <button id="whiteFlagBtn">🏳 Proceed</button>
+    </div>
+    <div id="captcha" style="display:none;">
+        <p>Prove That You Are Not Human: Select the picture of a horse… but only if it’s named Kevin</p>
+        <button class="captcha-option">Horse</button>
+        <button class="captcha-option">Kevin the Horse</button>
+        <button class="captcha-option">Not Kevin</button>
+    </div>
+    <div id="quiz" style="display:none;">
+        <p id="question"></p>
+        <div id="answers"></div>
+    </div>
+    <div id="results" style="display:none;">
+        <p>Score: 0/10 — Seek help.</p>
+        <button id="prizeBtn">Claim Your Prize</button>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
