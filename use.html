@@ -1,0 +1,49 @@
+"use client";
+
+import React, { useState } from "react";
+
+const humorousDescription = `Answer these 5 questions to prove you're NOT human. Be warned: It's intentionally infuriating. Good luck!`;
+
+export default function App() {
+  return (
+    <main className="min-h-screen w-full flex flex-col items-center justify-center bg-[#7851a9] px-2">
+      <div
+        className="rounded-3xl max-w-lg w-full mt-10 shadow-2xl border-4 border-yellow-400 p-8 flex flex-col items-center gap-5 bg-white/90"
+        style={{ boxShadow: '0 6px 40px #7851a943' }}
+      >
+        <h1 className="text-4xl md:text-5xl mb-2 animated-wiggle text-black drop-shadow font-extrabold" style={{ color: '#ffd600' }}>
+          Prove You Are <span className="animated-flash text-black">NOT Human</span>
+        </h1>
+        <p className="text-black font-bold text-md md:text-lg animated-jitter text-center mb-4" style={{fontFamily: 'Baloo 2, Arial, sans-serif'}}>
+          {humorousDescription}
+        </p>
+        {/* TODO: Quiz questions
+         * Each to be replaced by a FrustratingQuizQuestion component */}
+        <section className="w-full flex flex-col gap-4 mt-2">
+          <button onClick={console.log("yu are gay..")} className="bg-[#fffbde] rounded-xl border-2 border-yellow-300 shadow p-4 font-bold flex items-center justify-center text-black">
+            gay
+          </button>
+          <div className="bg-[#fffbde] rounded-xl border-2 border-yellow-300 shadow p-4 font-bold flex items-center justify-center text-black">
+            (Question 2 placeholder)
+          </div>
+          <div className="bg-[#fffbde] rounded-xl border-2 border-yellow-300 shadow p-4 font-bold flex items-center justify-center text-black">
+            (Question 3 placeholder)
+          </div>
+          <div className="bg-[#fffbde] rounded-xl border-2 border-yellow-300 shadow p-4 font-bold flex items-center justify-center text-black">
+            (Question 4 placeholder)
+          </div>
+          <div className="bg-[#fffbde] rounded-xl border-2 border-yellow-300 shadow p-4 font-bold flex items-center justify-center text-black">
+            (Question 5 placeholder)
+          </div>
+        </section>
+        {/* Final status or message (appears after submit or "failure") */}
+        <div className="hidden mt-6 animated-flash text-xl text-black font-extrabold" id="failure-msg">
+          Verification Failed: You Seem <span style={{color:'#7851a9'}}>Suspiciously Human</span>
+        </div>
+      </div>
+      <footer className="mt-10 text-yellow-400 font-bold text-center animated-jitter">
+        <span>&copy; 2025 NotHumanQuiz.com</span>
+      </footer>
+    </main>
+  );
+}
